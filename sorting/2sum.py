@@ -9,14 +9,14 @@ def _2sum(lst: List[int], desired_sum: int)-> Union[None, Tuple[int, int]]:
     start = 0 #pos 0 
     end = len(lst)-1 #pos -1 
     while start < end:
-        curr_sum = lst[start] + lst[end] 
+        cur_sum = lst[start] + lst[end] 
 
-        if curr_sum == desired_sum:
+        if cur_sum == desired_sum:
             return lst[start], lst[end]
 
-        elif curr_sum > desired_sum:
+        elif cur_sum > desired_sum:
             end -= 1 
-        elif curr_sum < desired_sum:
+        elif cur_sum < desired_sum:
             start += 1 
     return None
 
